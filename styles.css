@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    --main-background: #F3F5FC;
+    --secondary-background: #FFFFFF;
+    --font-and-button: #0A3871;
+    --secondary-font: #343A40;
+    --soft-font: #495057;
+    --hover-first-button: #072b57;
+    --hover-second-button: #e4e9fe;
+
+    --font-inter: 'Inter', 'Verdana';
+}
+
+*{
+    background-color: var(--main-background);
+    font-family: var(--font-inter);    
+}
+
+/*Sección del ingreso del encriptador*/
+
+.logo__alura__latam{
+    margin-top: 2%;
+    margin-left: 8%;
+    height: 45px;
+    width: 115px;
+}
+
+.encriptador{
+    display: flex;
+    gap: 4%;
+}
+
+
+.ingreso__encriptador{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+.insertar__texto{
+    color: var(--font-and-button);
+    font-family: var(--font-inter);
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 9%;
+    margin-left: 20%;
+    margin-right: 1%;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+#inputText::placeholder {
+    color:var(--font-and-button);
+  }
+
+.mensaje__recomendacion{
+    display: flex;
+    margin-left: 20%;
+    margin-top: 15%;
+    gap: 10px;
+}
+
+.simbolo__exclamacion{
+    height: 15px;
+    margin-top: 2px;
+}
+
+.recomendacion{
+    font-family: var(--font-inter);
+    color: var(--soft-font);
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+.botones__encriptador{
+    display: flex;
+    margin-left: 20%;
+    margin-top: 10px;
+    gap: 2%;
+}
+
+.boton__encriptar,
+.boton__desencriptar {
+    border-radius: 24px;
+    height: 67px;
+    width: 328px;
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--font-and-button);
+    border: 2px solid var(--font-and-button);
+    transition: transform 0.2s ease-in-out;
+}
+.boton__encriptar:active,
+.boton__desencriptar:active {
+    transform: scale(0.95);
+}
+
+.boton__encriptar{
+    background-color: var(--font-and-button);
+    color: var(--secondary-background);
+}
+
+.boton__encriptar:hover{
+    background-color: var(--hover-first-button);
+}
+
+.boton__desencriptar:hover,
+.boton__copiar_texto:hover{
+    background-color: var(--hover-second-button);
+}
+
+/*Sección de la salidad del encriptador*/
+
+.salida__encriptador__vacio{
+    background-color: var(--secondary-background);
+    margin-top: 5%; 
+    border-radius: 32px; 
+    height: 93%;
+    width: 80%; 
+    box-shadow: 0px 0px 32px -28px #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+.salida__encriptador__vacio,
+.mensaje__no__encontrado,
+.salida__encriptador h3,
+.salida__encriptador p,
+.salida__encriptador img {
+    background-color: var(--secondary-background);
+}
+
+.imagen__muneco{
+    margin-top: 20%;
+    width: 90%;
+}
+
+.mensaje__no__encontrado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--secondary-font);
+}
+
+.texto__no__encontrado{
+    font-family: var(--font-inter);
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0% 10%;
+    text-align: center;
+}
+
+.sugerencia__ingresar__texto{
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.texto__encriptado{
+    display: none;
+    flex-direction: column;
+    background: var(--secondary-background);
+    color: var(--soft-font);
+    font-family: var(--font-inter);
+    font-size: 1.5rem;
+    font-weight: 400;
+    width: 95%;
+    margin-top: 9%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: left;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.texto__encriptado.mostrar {
+    display: block; 
+}
+
+.boton__copiar_texto {
+    display: none; 
+    border-radius: 24px;
+    height: 67px;
+    width: 328px;
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--font-and-button);
+    border: 2px solid var(--font-and-button);
+    transition: transform 0.2s ease-in-out;
+}
+
+.boton__copiar_texto:active {
+    transform: scale(0.95);
+}
+
+.boton__copiar_texto.mostrar {
+    display: block; 
+    margin-top: 110%;
+}
+
+
+
+/***************Responsive for tablet****************/
+
+@media (max-width: 835px){
+
+    .logo__alura__latam{
+        margin-top: 5%;
+        margin-left: 1%;
+    }
+
+    .encriptador{
+        flex-direction: column;
+    }
+
+
+    .ingreso__encriptador{
+        margin-left: 0%;
+        width: 90%;
+    }
+
+    .insertar__texto{
+        margin-top: 15%;
+        margin-left: 5%;
+    }
+
+    .mensaje__recomendacion{
+        margin-left: 5%;
+        margin-top: 50%;
+    }
+
+    .botones__encriptador{
+        margin-left: 5%;
+    }
+
+
+    /*Sección de la salidad del encriptador*/
+
+    .salida__encriptador__vacio{
+        margin-top: 10%; 
+        margin-left: 5%;
+        height: 98%;
+        width: 75%; 
+    }
+
+    .imagen__muneco{
+        display: block;
+        margin-top: 0%;
+        width: 0%;
+    }
+
+    .texto__no__encontrado{        
+        margin: 2%;
+        padding: 0% 3%;
+    }
+
+    .boton__copiar_texto{
+        width: 90%;
+        margin-top: 50%;
+    }
+    
+    .salida__{
+        margin-top: 10%; 
+        margin-left: 5%;
+        height: 98%;
+        width: 80%; 
+        padding: 2%;
+    }
+    
+    .texto__encriptado{
+        margin: 3%;
+        width: 90%;
+    }
+}
+
+/***********Responsive for smatphone******************/
+
+@media (max-width: 360px){
+
+    .logo__alura__latam{
+        margin-top: 10%;
+        margin-left: 0%;
+        width: 60px;
+        height: 30px;
+    }    
+
+    .insertar__texto{
+        font-size: 1.8rem;
+    }
+
+    .mensaje__recomendacion{
+        margin-top: 1%;
+    }
+
+    .botones__encriptador{
+        margin-top: 1%;
+        margin-left: 2%;
+        flex-direction: column;
+    }
+
+    .boton__encriptar,
+    .boton__desencriptar,
+    .boton__copiar_texto{
+        margin: 0% 5% 3% 0%;
+    }
+
+
+    /*Sección de la salidad del encriptador*/
+
+    .salida__encriptador__vacio{
+        margin-top: 3%; 
+        margin-left: 1%;
+        height: 40%;
+        width: 75%; 
+    }
+
+    .sugerencia__ingresar__texto{
+        margin-top: 0%;
+    }
+
+    .boton__copiar_texto{
+        margin-top: 150%;
+    }
+    
+    .salida__{
+        margin-top: 10%; 
+        margin-left: 5%;
+        height: 98%;
+        width: 85%; 
+    }
+    
+    .texto__encriptado{
+        margin: 3%;
+        width: 90%;
+    }
+    
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de palabras</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./assets/Logo.png">
+</head>
+
+<body>
+
+    <main class="encriptador">   
+
+        <section class="ingreso__encriptador">
+            <img src="./assets/Frame 6.png" alt="Logo de Alura Latam" class="logo__alura__latam">
+            
+            <textarea class="insertar__texto" id="inputText" placeholder="Ingresa el texto aquí" cols="10" rows="7"></textarea>
+         
+            <div class="mensaje__recomendacion">
+                <img src="./assets/bi_exclamation-circle-fill.png" alt="Símbolo de exclamación" class="simbolo__exclamacion">
+                <p class="recomendacion">Solo letras minúsculas y sin acentos</p>
+            </div>
+
+            <div class="botones__encriptador">
+                <input type="button" class="boton__encriptar" value="Encriptar" onclick="encriptarTexto()">
+                <input type="button" class="boton__desencriptar" value="Desencriptar" onclick="desencriptarTexto()">
+             </div>
+
+        </section>
+        
+        <section class="salida__encriptador">
+           
+            <div class="salida__encriptador__vacio">
+                <textarea class="texto__encriptado" id="outputText" cols="10" rows="7"></textarea>
+                <img src="./assets/Muñeco.png" alt="Muñeco con lupa" class="imagen__muneco">
+                <div class="mensaje__no__encontrado">
+                    <h3 class="texto__no__encontrado"> Ningún mensaje fue encontrado</h3>
+                    <p class="sugerencia__ingresar__texto"> 
+                        Ingresa el texto que desees encriptar o desencriptar.
+                    </p>
+                </div>
+                <input type="button" value="Copiar" class="boton__copiar_texto" onclick="copiarTexto()" disabled>
+            </div>
+
+        </section>
+        
+    </main>
+<script src="script.js"></script>
+</body>
+
+</html>
